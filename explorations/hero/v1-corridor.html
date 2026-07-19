@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PŽ — V1 Corridor</title>
+<link rel="stylesheet" href="assets/shared.css">
+<style>
+  .veil {
+    background:
+      linear-gradient(180deg, rgba(8,8,8,.65) 0%, rgba(8,8,8,0) 26%),
+      linear-gradient(180deg, rgba(8,8,8,0) 55%, rgba(8,8,8,.9) 100%),
+      linear-gradient(90deg, rgba(8,8,8,.35) 0%, rgba(8,8,8,0) 40%);
+  }
+  .stack {
+    position: absolute;
+    left: 40px;
+    bottom: 96px;
+    z-index: 4;
+  }
+  .kicker {
+    font-size: 13px;
+    letter-spacing: 0.42em;
+    text-transform: uppercase;
+    color: var(--mid);
+    margin-bottom: 22px;
+  }
+  h1 {
+    font-stretch: 125%;
+    text-transform: uppercase;
+    line-height: 0.86;
+    letter-spacing: -0.01em;
+    font-size: clamp(64px, 11.5vw, 168px);
+  }
+  h1 .thin { display: block; font-weight: 100; color: #cfcfcf; }
+  h1 .heavy {
+    display: block;
+    font-weight: 900;
+    background: linear-gradient(90deg, #f2f2f2 0%, #8e8e8e 62%, #4a4a4a 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  .cue {
+    position: absolute;
+    right: 40px;
+    bottom: 96px;
+    z-index: 4;
+    font-size: 11px;
+    letter-spacing: 0.34em;
+    text-transform: uppercase;
+    color: var(--mid);
+    writing-mode: vertical-rl;
+  }
+  .plate.mobile { display: none; }
+  @media (max-width: 720px) {
+    .plate.desktop { display: none; }
+    .plate.mobile { display: block; }
+    .stack { left: 22px; bottom: 84px; }
+    h1 { font-size: clamp(52px, 16vw, 96px); }
+    .cue { right: 22px; bottom: 84px; }
+  }
+</style>
+</head>
+<body>
+<section class="hero">
+  <img class="plate desktop" src="assets/img/hallway-vanish.jpg" alt="">
+  <img class="plate mobile" src="assets/img/hallway-vanish-portrait.jpg" alt="">
+  <div class="veil"></div>
+  <nav>
+    <span class="mark">PŽ</span>
+    <span class="links"><a href="#">Work</a><a href="#">About</a><a href="#">Contact</a></span>
+  </nav>
+  <div class="stack">
+    <p class="kicker">Interface Designer</p>
+    <h1><span class="thin">Petar</span><span class="heavy">Živković</span></h1>
+  </div>
+  <p class="cue">Selected Work ↓</p>
+  <div class="strip">
+    <span>© 2026</span>
+    <span class="idx"><span><b>01</b>Uštedi</span><span><b>02</b>STMNT</span><span><b>03</b>SkyAccess</span></span>
+  </div>
+</section>
+</body>
+</html>

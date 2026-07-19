@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PŽ — V3 Slit</title>
+<link rel="stylesheet" href="assets/shared.css">
+<style>
+  .veil {
+    background:
+      linear-gradient(180deg, rgba(8,8,8,.5) 0%, rgba(8,8,8,0) 24%),
+      linear-gradient(180deg, rgba(8,8,8,0) 62%, rgba(8,8,8,.92) 100%);
+  }
+  .lower {
+    position: absolute;
+    left: 0; right: 0;
+    bottom: 17%;
+    z-index: 4;
+    text-align: center;
+  }
+  h1 {
+    font-weight: 200;
+    font-stretch: 110%;
+    text-transform: uppercase;
+    font-size: clamp(30px, 4.4vw, 64px);
+    letter-spacing: 0.46em;
+    text-indent: 0.46em;
+    color: #e6e6e6;
+  }
+  .rule {
+    width: 1px;
+    height: 64px;
+    margin: 0 auto 34px;
+    background: linear-gradient(180deg, rgba(236,236,236,0) 0%, rgba(236,236,236,.7) 100%);
+  }
+  .tag {
+    margin-top: 24px;
+    font-size: 11px;
+    font-weight: 300;
+    letter-spacing: 0.36em;
+    text-indent: 0.36em;
+    text-transform: uppercase;
+    color: var(--dim);
+  }
+  .plate { object-position: center; }
+  @media (max-width: 720px) {
+    h1 { font-size: clamp(22px, 6.4vw, 40px); letter-spacing: 0.34em; text-indent: 0.34em; }
+    .lower { bottom: 20%; padding: 0 16px; }
+  }
+</style>
+</head>
+<body>
+<section class="hero">
+  <img class="plate" src="assets/img/light-slit.jpg" alt="">
+  <div class="veil"></div>
+  <nav>
+    <span class="mark">PŽ</span>
+    <span class="links"><a href="#">Work</a><a href="#">About</a><a href="#">Contact</a></span>
+  </nav>
+  <div class="lower">
+    <div class="rule"></div>
+    <h1>Petar Živković</h1>
+    <p class="tag">Interface Designer — Selected Work MMXXVI</p>
+  </div>
+  <div class="strip">
+    <span>© 2026</span>
+    <span class="idx"><span><b>01</b>Uštedi</span><span><b>02</b>STMNT</span><span><b>03</b>SkyAccess</span></span>
+  </div>
+</section>
+</body>
+</html>
