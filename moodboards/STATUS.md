@@ -9,7 +9,7 @@
 3. Phase 2: design + build the actual portfolio from the winning board. New site lives in this repo (`design-portfolio-v2`, currently empty). Old site: peterz91.github.io/design-portfolio (source in repo `peterz91/design-portfolio` — can be added to a session via add_repo for content inventory: name, projects, copy).
 
 ## Current blockers
-None. **Awaiting Peter's direction pick** (or hybrid/iteration notes) on the three moodboards.
+None. **Phase 2 in progress — mockup iteration.** Monolith direction locked. Peter pivoted to image-generated mockups (no code prototypes for now; HTML heroes parked in `explorations/hero/`). Round 1 (photographic heroes) in `explorations/mockups/round1/`. Round 2 (vector-style: flat geometric slabs, smooth gradient light — chosen because it can later be rebuilt as manipulable SVG/WebGL) in `explorations/mockups/round2-vector/`. Awaiting Peter's pick/notes on round 2. Mockup model: t2i-gemini-3-pro @2K ($0.18/img). NOTE: FLORA execute tool 502s on first call after idle — retry once, then dedupe against generations.list before re-creating (map by creation order; don't trust short time windows — see round-2 mismap incident).
 
 ## Resolved
 - **Network egress**: environment switched to Full (took effect live, no restart needed).
