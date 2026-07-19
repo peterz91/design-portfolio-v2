@@ -9,10 +9,12 @@
 3. Phase 2: design + build the actual portfolio from the winning board. New site lives in this repo (`design-portfolio-v2`, currently empty). Old site: peterz91.github.io/design-portfolio (source in repo `peterz91/design-portfolio` — can be added to a session via add_repo for content inventory: name, projects, copy).
 
 ## Current blockers
-1. **FLORA MCP connector — root cause FOUND, awaiting reconnect.** The originally used URL `https://flora.ai/mcp` is a Framer *marketing page*, not an MCP server — that's why OAuth auto-registration failed ("Couldn't register with FLORA.au's sign-in service", ref `ofid_62feed4603f14613`). The real endpoint is **`https://agents.flora.ai/mcp`** (verified 2026-07-19: proper 401 Bearer challenge, protected-resource metadata, auth-server metadata with live `/register` DCR endpoint, PKCE S256). Fix: delete the broken connector on claude.ai → add custom connector "FLORA" with `https://agents.flora.ai/mcp` → Connect/approve → enable on the session. FLORA dev docs: https://developer.flora.ai/mcp/install/other-clients/
+None. **Awaiting Peter's direction pick** (or hybrid/iteration notes) on the three moodboards.
 
 ## Resolved
-- **Network egress**: environment switched to Full (took effect live, no restart needed). External sites reachable from sandbox.
+- **Network egress**: environment switched to Full (took effect live, no restart needed).
+- **FLORA MCP connected.** Root cause of earlier failure: `https://flora.ai/mcp` is a marketing page; real endpoint is `https://agents.flora.ai/mcp`. Connected and working (tools: mcp__FLORA_ai__execute / search_docs).
+- **All 24 moodboard images generated** (Flux 2 Pro, `t2i-flux-2-pro`, ~$0.036/image, ~$0.87 total) into FLORA project "Portfolio Moodboards" (`prj_ns720ftatypept0e8kagd2xv5d8at5jh`, workspace `ws_qd7ay1men88qjyscfjpbbndhx584t464`). Saved to `moodboards/img/<direction>/`; contact sheets in `moodboards/boards/*.jpg` (built by scratchpad `make_boards.py`, Pillow masonry layout).
 
 ## Plan B if connector stays broken
 Peter generates the 24 prompts from `DIRECTIONS.md` directly in FLORA's app/canvas and shares outputs (chat upload or into `moodboards/img/<direction>/`); moodboard pages get assembled from those.
